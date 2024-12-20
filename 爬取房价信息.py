@@ -51,7 +51,7 @@ def getData(baseurl):
             data.append(averageprice)
 
             datalist.append(data)
-        time.sleep(10)
+        time.sleep(60)
     return datalist
 
 
