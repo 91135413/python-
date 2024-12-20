@@ -4,10 +4,25 @@
     <meta charset="UTF-8">
     <title>Awesome-pyecharts</title>
                 <script type="text/javascript" src="https://assets.pyecharts.org/assets/v5/echarts.min.js"></script>
+ <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
 
+        .chart-container {
+            width: 100%;
+            height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
 </head>
 <body >
-    <div id="10dc9480d21f4108ae930ab2c6695adb" class="chart-container" style="width:2500px; height:1300px; "></div>
+    <div id="10dc9480d21f4108ae930ab2c6695adb" class="chart-container" style="width:100%; height:100%; "></div>
     <script>
         var chart_10dc9480d21f4108ae930ab2c6695adb = echarts.init(
             document.getElementById('10dc9480d21f4108ae930ab2c6695adb'), 'light', {renderer: 'canvas'});
@@ -349,7 +364,9 @@
         "zoomLock": false,
         "filterMode": "filter"
     }
-};
+};      window.addEventListener('resize', function() {
+    chart_10dc9480d21f4108ae930ab2c6695adb.resize();
+});
         chart_10dc9480d21f4108ae930ab2c6695adb.setOption(option_10dc9480d21f4108ae930ab2c6695adb);
     </script>
 </body>
